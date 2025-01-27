@@ -555,6 +555,7 @@ function selectCountry(country) {
     selected.innerHTML = `
         <span class="flag-icon flag-icon-${country.code}"></span>
         <span class="country-code">${country.dialCode}</span>
+        <span class="phone-status" id="phoneStatus"></span> 
         <i class="arrow"></i>
     `;
     
