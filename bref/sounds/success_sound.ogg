@@ -1,0 +1,4 @@
+    <audio id="successSound">
+        <source src="sounds/success_sound.mp3" type="audio/mpeg">
+        <source src="sounds/success_sound.ogg" type="audio/ogg">
+      </audio>

@@ -1,0 +1,153 @@
+/* تصميم متجاوب للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .container {
+        max-width: 600px; /* تقليل العرض الأقصى */
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 400px; /* تقليل العرض الأقصى */
+    }
+    .grid-2col {
+        grid-template-columns: 1fr; /* تغيير إلى عمود واحد */
+    }
+    .radio-options {
+        grid-template-columns: 1fr; /* تغيير إلى عمود واحد */
+    }
+    .section {
+        padding: 15px; /* تقليل الحشوة */
+    }
+    h1 {
+        font-size: 24px; /* تقليل حجم الخط */
+    }
+    h2 {
+        font-size: 18px; /* تقليل حجم الخط */
+    }
+}
+/* تصميم متجاوب للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 400px;
+    }
+    .grid-2col {
+        grid-template-columns: 1fr;
+    }
+    .section {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+}
+@media (max-width: 768px) {
+    .form-group {
+        flex-direction: column;
+    }
+}
+/* حل جذري للجوالات الصغيرة */
+@media (max-width: 480px) {
+    .phone-input-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .country-selector {
+        width: 100% !important;
+        margin-left: 0;
+    }
+    
+    .country-selector {
+        order: 1; /* في الجوال يظهر أعلى الحقل */
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    #phone {
+        padding-right: 15px;
+    }
+}
+
+/* إصلاحات خاصة لمتصفحات WebKit (آيفون) */
+@supports (-webkit-overflow-scrolling: touch) {
+    #phone {
+        font-size: 16px !important; /* إصلاح حجم الخط على iOS */
+    }
+}
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .slider-group {
+        padding: 1rem;
+    }
+    
+    .slider-label {
+        font-size: 14px;
+    }
+    
+    .slider-percentage {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trait-selector-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .trait-card {
+        padding: 15px;
+    }
+    
+    .trait-card i {
+        font-size: 24px;
+    }
+}
+@media (max-width: 480px) {
+    /* تحويل التخطيط لصفين مع هوامش محسنة */
+    .grid-2col {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 8px !important;
+    }
+  
+    /* تعديل حجم العناصر للأجهزة الصغيرة جدًا */
+    @media (max-width: 360px) {
+      .grid-2col {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  
+    /* تحسين حجم الخطوط والأيقونات */
+    .checkbox-label {
+      font-size: 14px;
+      padding: 10px;
+      margin: 2px 0;
+    }
+  
+    .checkbox-label i {
+      font-size: 18px !important;
+    }
+  
+    /* تحسين المسافات بين العناصر */
+    .grid-2col label {
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 480px) {
+    .phone-input-container {
+        flex-direction: column;
+    }
+    .country-selector {
+        width: 100% !important;
+    }
+}
