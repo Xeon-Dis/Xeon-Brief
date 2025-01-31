@@ -164,6 +164,7 @@ let colorCounter = 0;
 document.getElementById('addColorButton').addEventListener('click', e => {
     e.preventDefault();
     addColorField();
+    
 });
 
 function addColorField() {
@@ -176,6 +177,7 @@ function addColorField() {
     document.getElementById('addColorButton').insertAdjacentHTML('beforebegin', newColor);
     setupColorEvents(document.getElementById(`color${colorCounter}`));
 }
+
 
 function setupColorEvents(element) {
     element.addEventListener('contextmenu', e => {
@@ -555,7 +557,7 @@ function selectCountry(country) {
     selected.innerHTML = `
         <span class="flag-icon flag-icon-${country.code}"></span>
         <span class="country-code">${country.dialCode}</span>
-        <span class="phone-status" id="phoneStatus"></span> 
+             <span class="phone-status" id="phoneStatus"></span> 
         <i class="arrow"></i>
     `;
     
@@ -947,7 +949,6 @@ function validateForm(event) {
         document.getElementById('successMessage').style.display = 'block';
         // document.getElementById('briefForm').submit(); // إلغاء التعليق عند الربط مع الخادم
     }
-    console.log("الحقول المرتبة:", requiredFields.map(f => f.id));
 }
 // التحقق الفوري أثناء الكتابة + تحديث الرسالة
 document.getElementById('phone').addEventListener('input', function() {

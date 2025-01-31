@@ -1,0 +1,133 @@
+
+/* تخصيص Flatpickr */
+.flatpickr-calendar {
+    font-family: RB; /* استخدام الخط الافتراضي */
+    direction: rtl; /* اتجاه النص من اليمين لليسار */
+    background-color: #fff; /* لون الخلفية */
+    border-radius: 12px; /* زوايا مدورة */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+    border: 1px solid #e0e0e0; /* إطار حول التقويم */
+    z-index: 9999; /* التأكد من ظهور التقويم فوق العناصر الأخرى */
+}
+
+/* تنسيقات لقائمة الأشهر */
+.flatpickr-monthDropdown-months {
+    font-family: RB; /* استخدام الخط الافتراضي */
+    background-color: #f9f9f9; /* لون الخلفية */
+    border-radius: 8px; /* زوايا مدورة */
+    padding: 5px; /* حشو داخلي */
+    font-size: 14px; /* حجم الخط */
+    direction: ltr; /* اتجاه النص من اليسار لليمين */
+    appearance: none; /* إزالة المظهر الافتراضي */
+    -webkit-appearance: none; /* إزالة المظهر الافتراضي لـ Safari */
+    -moz-appearance: none; /* إزالة المظهر الافتراضي لـ Firefox */
+    cursor: pointer; /* تغيير شكل المؤشر */
+    border: 1px solid #ccc; /* إطار حول القائمة */
+    color: #333; /* لون النص */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* تأثيرات عند التمرير */
+}
+
+/* تنسيقات لقائمة الأشهر عند التمرير */
+.flatpickr-monthDropdown-months:hover {
+    background-color: #e9e9e9; /* لون الخلفية عند التمرير */
+    border-color: #d32f2f; /* لون الإطار عند التمرير */
+}
+
+/* تنسيقات للشهر والسنة الحالية */
+.flatpickr-current-month {
+    direction: ltr; /* اتجاه النص من اليسار لليمين */
+    font-size: 16px; /* حجم الخط */
+    padding: 5px; /* حشو داخلي */
+}
+
+/* تنسيقات لأيام الأسبوع */
+.flatpickr-weekdays {
+    font-family: RB; /* استخدام الخط الافتراضي */
+    background-color: #f9f9f9; /* لون الخلفية */
+    border-bottom: 1px solid #e0e0e0; /* خط أسفل الأيام */
+    font-size: 14px; /* حجم الخط */
+}
+
+/* تنسيقات ليوم الأسبوع */
+.flatpickr-weekday {
+    font-family: RB; /* استخدام الخط الافتراضي */
+    color: #333; /* لون النص */
+}
+
+/* تنسيقات ليوم في التقويم */
+.flatpickr-day {
+    font-family: RB; /* استخدام الخط الافتراضي */
+    color: #333; /* لون النص */
+    border-radius: 8px; /* زوايا مدورة */
+    font-size: 14px; /* حجم الخط */
+}
+
+/* تنسيقات ليوم محدد أو عند التمرير */
+.flatpickr-day.selected,
+.flatpickr-day:hover {
+    background-color: #d32f2f; /* لون الخلفية */
+    color: #fff; /* لون النص */
+    border-color: #d32f2f; /* لون الإطار */
+}
+
+/* تنسيقات ليوم اليوم */
+.flatpickr-day.today {
+    border: 1px solid #d32f2f; /* إطار حول اليوم */
+}
+
+/* تنسيقات ليوم اليوم عند التمرير */
+.flatpickr-day.today:hover {
+    background-color: #d32f2f; /* لون الخلفية */
+    color: #fff; /* لون النص */
+}
+
+/* تنسيقات للأيام المعطلة */
+.flatpickr-day.disabled,
+.flatpickr-day.disabled:hover {
+    color: #ccc; /* لون النص */
+    background-color: #f9f9f9; /* لون الخلفية */
+}
+
+/* تنسيقات لأزرار الشهر السابق والتالي */
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    color: #d32f2f; /* لون النص */
+}
+
+/* تنسيقات لأزرار الشهر السابق والتالي عند التمرير */
+.flatpickr-prev-month:hover,
+.flatpickr-next-month:hover {
+    color: #b71c1c; /* لون النص */
+}
+/* منع التمرير عند فتح التقويم */
+body.flatpickr-open {
+    overflow: hidden;
+    touch-action: none;
+  }
+  
+  /* تحسين الظهور على الشاشات الصغيرة */
+  @media (max-width: 480px) {
+    .flatpickr-calendar {
+      border-radius: 20px !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+    }
+    
+    .flatpickr-months {
+      padding: 10px !important;
+    }
+    
+    .flatpickr-weekdays {
+      padding: 0 10px !important;
+    }
+    
+    .flatpickr-days {
+      padding: 10px !important;
+    }
+  }
+  
+  /* إصلاح مشكلة اللمس على iOS */
+  .flatpickr-day {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
+  }         
+  
