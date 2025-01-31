@@ -1,0 +1,66 @@
+/* تصميم متجاوب للشاشات متوسطة الحجم (تابلت) */
+@media (max-width: 768px) {
+    .container { max-width: 600px; }
+    .form-group { flex-direction: column; }
+    .slider-group { padding: 1rem; }
+    .slider-label { font-size: 14px; }
+    .slider-percentage {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+    .trait-selector-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .trait-card {
+        padding: 15px;
+    }
+    .trait-card i { font-size: 24px; }
+}
+
+/* تحسينات للشاشات الصغيرة (جوال أفقي) */
+@media (max-width: 600px) {
+    .container { max-width: 400px; }
+    .grid-2col,
+
+    .section { padding: 15px; }
+    h1 { font-size: 24px; } /* تصغير عناوين رئيسية */
+    h2 { font-size: 18px; }
+}
+
+/* تحسينات للجوالات العمودية */
+@media (max-width: 480px) {
+    .phone-input-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .country-selector {
+        width: 100% !important;
+        margin: 0;
+        order: 1; /* نقل خانة الدولة لأعلى */
+    }
+    #phone { padding-right: 15px; }
+    
+    /* تعديل تخطيط الأزرار في الشاشات الصغيرة */
+    .grid-2col {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+    .checkbox-label {
+        font-size: 14px;
+        padding: 10px;
+        margin: 2px 0;
+    }
+    .checkbox-label i { font-size: 18px !important; }
+}
+
+/* تحسينات للشاشات الأصغر من 360px */
+@media (max-width: 360px) {
+    .grid-2col { grid-template-columns: 1fr !important; }
+}
+
+/* إصلاحات خاصة لأجهزة iOS */
+@supports (-webkit-overflow-scrolling: touch) {
+    #phone { font-size: 16px !important; } /* منع تكبير الخط تلقائيًا */
+}
+
